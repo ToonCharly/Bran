@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(212, 175, 55, 0.7); /* Dorado con transparencia */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.shop a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.mission {
+    width: 100%;
+    height: 80vh;
+    background-image: url('/Imagenes/capucha-graduacion-gotas-lluvia-superficie-madera-al-atardecer_854757-10551.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute; /* Posición absoluta para colocarlo dentro del contenedor padre */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la imagen */
+    padding: 20px;
+    background: rgba(10, 17, 114, 0.8); /* Azul oscuro con 80% de transparencia */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #D4AF37; /* Texto en dorado */
+}
+
+.overlay h1 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Reduce el margen para que el botón esté más cerca */
+    color: white;
+}
+
+/* Cambiar el color de los títulos h3 a dorado */
+.content-section .text-container h3 {
+    color: #D4AF37; /* Color dorado */
+}
+
+
+.learn-more {
+    padding: 10px 20px;
+    border: 1px solid #D4AF37; /* Borde dorado */
+    color: #D4AF37; /* Texto dorado */
+    text-decoration: none;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo del botón oscuro */
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.learn-more:hover {
+    background: #D4AF37; /* Fondo dorado en hover */
+    color: black; /* Texto negro en hover */
+}
+
+/* Nueva sección de contenido con imagen y texto */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.content-section .image-container {
+    width: 40%; /* Reduce el tamaño de la imagen */
+}
+
+.content-section .text-container {
+    width: 58%; /* Aumenta el ancho del contenedor de texto */
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: none; /* Permite que el texto tenga el tamaño completo */
+}
+
+.content-section img {
+    width: 100%;
+    height: auto;
+}
+
+.content-section .text-container h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.content-section .text-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow: auto; /* Permite desplazarse en caso de texto largo */
+    text-overflow: initial;
+    white-space: normal; /* Permite que el texto ocupe varias líneas */
+}
+
+/* Segunda sección con imagen a la derecha */
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a, .shop a {
+        font-size: 14px;
+    }
+
+    .overlay h2 {
+        font-size: 20px;
+    }
+
+    .overlay h1 {
+        font-size: 28px;
+    }
+
+    .learn-more {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    /* Adaptación de la sección de imágenes y texto */
+    .content-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .content-section .image-container,
+    .content-section .text-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content-section .text-container p {
+        white-space: normal;
+    }
+}
